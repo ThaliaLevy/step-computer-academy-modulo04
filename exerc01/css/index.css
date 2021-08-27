@@ -1,0 +1,30 @@
+.bg-body{
+    background-color: rgb(37, 29, 82);
+    height: 750px;
+}
+
+h2{
+    text-align: center;
+    margin-top: 2%;
+    text-shadow: 10px 10px 10px black;
+}
+
+.bg-class-nav{
+    background-color: rgb(29, 2, 71);
+}
+
+.text{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg-class-carousel{
+    background-color: rgb(29, 2, 71);
+    margin-top: 2%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
+}
+
+header{
+    margin-top: 5%;
+}

@@ -1,0 +1,28 @@
+.bg-body{
+    background-color: rgb(37, 29, 82);
+    height: 750px;
+}
+
+.bg-class-nav{
+    background-color: rgb(29, 2, 71);
+}
+
+.text{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.align-container{
+    margin-top: 5%;
+}
+
+h2{
+    text-align: center;
+    height: 100px;
+    text-shadow: 10px 10px 10px black;
+}
+
+.div-button{
+    text-align: center;
+    margin-top: 3%;
+}
