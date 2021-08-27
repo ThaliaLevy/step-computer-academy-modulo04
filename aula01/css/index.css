@@ -1,0 +1,24 @@
+.nav-fundo{
+    background-color: purple;
+}
+
+.bg-verde{
+    background-color: yellowgreen;
+}
+
+.div-cinza{
+    background-color: darkgray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px black;
+    margin-top: 10px;
+}
+
+.titulo{
+    text-shadow: 1px 1px 1px black;
+    color: white;
+}
+
+.ws_images{
+    width: 95%;
+    margin: 5px;
+}
