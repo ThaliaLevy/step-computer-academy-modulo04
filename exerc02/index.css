@@ -1,5 +1,4 @@
-
-.col-md-1{
+.col-md-1{ 
     background-color: white;
     height: 300px;
 }
@@ -90,4 +89,18 @@ hr{
     font-weight: 550;
     font-family: arial,sans-serif;
     font-size: 15px;
+}
+
+#text-5{
+    position: absolute;
+    color: rgb(23, 23, 146);
+    margin-left: -10px;
+    font-size: 12px;
+}
+
+#text-6{
+    position: absolute;
+    color: rgb(23, 23, 146);
+    margin-left: -80px;
+    font-size: 12px;
 }
