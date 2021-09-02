@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="css/global.css" type="text/css">
+</head>
+
+<body>
+  <nav class="light-green" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">FLORICULTURA</a>
+      <span><a class="btn-floating pulse"></a></span>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="form.html">Formulário de compra</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <header>
+    <h5>Preencha o formulário abaixo <br>para solicitar a compra <br></h5>
+  </header>
+  <session>
+    <div class="container">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">Nome</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">email</i>
+              <input id="icon_telephone" type="email" class="validate">
+              <label for="icon_telephone">Email</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Endereço de entrega</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="row">
+            <label id="id-label">Selecione a flor que deseja</label>
+            <select class="browser-default">
+              <option value="" disabled selected>Selecione</option>
+              <option value="rosa">Rosa</option>
+              <option value="margarida">Margarida</option>
+              <option value="tulipa">Tulipa</option>
+              <option value="Girassol">Girassol</option>
+            </select>
+          </div>
+
+          <div action="#">
+            <br>
+            <label>Forma de pagamento</label>
+            <p>
+              <label>
+                <input name="pagamento" type="radio" checked />
+                <span>Débito</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="pagamento" type="radio" />
+                <span>Crédito</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="pagamento" type="radio" />
+                <span>Dinheiro</span>
+              </label>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </session>
+
+  <footer><a class="waves-effect waves-light btn">Enviar</a></footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

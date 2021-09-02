@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(12, 78, 64);
+}
+h5{
+    margin-top: 100px;
+    margin-left: -30px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+img{
+    border: 10px solid whitesmoke;
+    border-top: 100px solid whitesmoke;
+}
+
+.btn-floating{
+    margin-left: -80px;
+}
+
+.material-icons{
+    margin-top: -12px;
+}
+
+.carousel{
+    margin-left: -50px;
+}
+
+header{
+    height: 90px;
+}
+
+label{
+    font-size: 16px;
+}
+
+#id-label{
+    width: 300px;
+}
+
+.container{
+    width: 650px;
+}
+
+footer{
+    text-align: center;
+    height: 100px;
+}
+
+select{
+    margin-top: 10px;
+}
