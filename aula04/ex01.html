@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex layout</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<style>
+    .block {
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div class="d-flex p-4 bg-secondary">           <!-- p-4 = padding tamanho 4. o máx é 5 -->
+        <div class="bg-primary p-3 block">oi</div>  <!-- flex se adapta ao tamanho do texto -->
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+    <br>
+    <div class="d-flex-inline p-3 bg-secondary">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+    <div class="d-inline-flex p-3 bg-secondary">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+
+    <br>
+    <div class="d-flex flex-row p-4 bg-secondary">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+    <div class="d-flex flex-row-reverse p-3 bg-secondary">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+    <hr>
+
+    <div class="d-inline-flex flex-column p-3 bg-warning">
+        <div class="bg-info p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+    <div class="d-inline-flex flex-column p-3 bg-secondary">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+    
+    <br><hr>
+
+    <div class="d-flex justify-content-start p-3 bg-warning">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+
+    <br><hr>
+
+    <div class="d-flex justify-content-end p-3 bg-warning">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+
+    <br><hr>
+
+    <div class="d-flex justify-content-center p-3 bg-warning">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+
+    <br><hr>
+
+    <div class="d-flex justify-content-between p-3 bg-warning">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+    
+    <br><hr>
+
+    <div class="d-flex justify-content-around p-3 bg-warning">
+        <div class="bg-primary p-3 block">oi</div>
+        <div class="bg-success p-3 block">oi</div>
+        <div class="bg-danger p-3 block">oi</div>
+    </div>
+    
+    <br><hr>
+
+    <div class="d-flex p-3 bg-secondary">
+        <div class="bg-primary p-3 block flex-fill">oi</div>
+        <div class="bg-success p-3 block flex-fill">oi</div>
+        <div class="bg-danger p-3 block flex-fill">oi</div>
+    </div>
+</body>
+
+</html>
