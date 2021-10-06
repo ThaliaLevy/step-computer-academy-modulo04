@@ -1,0 +1,65 @@
+body{
+    background-image: url("https://cdn.worldvectorlogo.com/logos/aerosmith-1.svg");
+    background-size: 100px;
+}
+
+nav{
+    height: 130px;
+    width: 100%;
+    font-size: 27px;
+    border-bottom: 1px solid yellow;
+}
+
+.color-black{
+    background-color: #0a0909;
+}
+
+#div-nav{
+    margin-top: -80px;
+    margin-left: 400px;
+}
+
+a{
+    color: white;
+    margin-left: 130px;
+}
+
+#img-logo{
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.session{
+    width: 1000px;
+    height: 400px;
+    border: 1px solid yellow;
+    margin-left: 12%;
+    margin-top: 100px;
+}
+
+.ajuste{
+    margin-left: 725px;
+    width: 250px;
+}
+
+.ajuste2{
+    margin-top: -450px;
+}
+
+.musica{
+    margin-top: -300px;
+}
+
+#img-session{
+    width: 700px;
+    height: 400px;
+}
+
+.icon{
+    background-color: white;
+    margin-left: 725px;
+    width: 40px;
+    height: 40px;
+}

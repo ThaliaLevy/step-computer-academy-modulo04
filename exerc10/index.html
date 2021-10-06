@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rami - dever Aula09 - Layout responsivo</title>
+    <link rel="stylesheet" href="./CSS/main.css">
+    <!-- inspiração https://www.transmico.com/ -->
+    <!-- 
+        DEVER DE CASA
+        Fça um site de uma oficina mecânica.
+        Deve ter layout para celular e desktop.
+        FAÇA A RESONSIVIDADE MANUALMENTE (sem BS, materialize, etc).
+        ======= mínimo -> 7pt
+     -->
+</head>
+
+<body>
+    <header class="flex-container">
+        <div class="col-3 col-s-12 logo">
+            <img src="./IMG/logo_trans-mico.png" alt="Logo">
+        </div>
+        <p class="col-3 col-s-12 numero"><b>Tel: (21) 2347-3246</b></p>
+    </header>
+    <main>
+        <section id="welcome">
+            <picture class="welcomeImage">
+                <source srcset="./IMG/pontiac.jpeg" media="(min-width: 768px)">
+                <source srcset="./IMG/vovoDaFusca.jpeg">
+                <img alt="carro antigo" class="image">
+            </picture>
+        </section>
+        <section id="presentation">
+            <h1 class="presTitulo col-12">Garage de transmission et entretien automobile à Montréal</h1>
+            <div class="flex-container flex-row">
+                <div class="presText flex-container flex-column col-6 col-s-12">
+                    <p>
+                        Situé sur l’île de Montréal, Trans-Mico Automotive est un <strong>garage de
+                            transmission</strong>
+                        spécialisé dans l’<strong>entretien automobile</strong> pour toutes les marques de véhicules.
+                    </p>
+                    <p>
+                        Que ce soit pour la réparation et l’entretien des transmissions, des différentiels et des
+                        boîtiers de
+                        transfert de tous les types de voitures, Trans-Mico Automotive est votre référence dans la
+                        région de
+                        Pierrefonds et les environs.
+                    </p>
+                    <p>
+                        L’équipement de notre <strong>garage automobile</strong> est à la fine pointe de la technologie
+                        nous
+                        assure un haut niveau de la qualité du service offert par nos mécaniciens qualifiés et formés,
+                        ainsi
+                        que la satisfaction de notre clientèle depuis 1979.
+                    </p>
+                </div>
+                <div class="col-6 col-s-12">
+                    <div class="presVideo">
+                        <iframe title="vimeo-player" src="https://player.vimeo.com/video/150206044?h=839cf79c4b"
+                            frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="service">
+            <h2 class="servTitulo col-12">
+                Les services de notre garage automobile
+            </h2>
+            <p>
+                Chez Trans-Mico, nous sommes fiers de vous offrir des services de réparation et d’entretien automobiles
+                complets afin de répondre à vos besoins. Vous soupçonnez un trouble mécanique ou électrique sur votre
+                véhicule? Ne laissez pas le problème s’aggraver et prenez rendez-vous dès aujourd’hui à notre garage de
+                transmission à Montréal. C’est avec professionnalisme et rigueur que nous nous chargerons d’effectuer
+                les travaux nécessaires.
+            </p>
+        </section>
+        <section id="listaServices">
+            <h2 class="listTitulo col-12">Liste complète de nos services</h2>
+            <div class="flex-container flex-row align-items-start">
+                <div class="serviceBloco col-4 col-s-12">
+                    <div class="flex-container flex-row-lg flex-column-s">
+                        <i class="fas fa-cogs icon"></i>
+                        <h4 class="serviceTitulo">Réparation de transmission</h4>
+                    </div>
+                    <p>
+                        Votre transmission fait de drôles de bruit ou ne fonctionne plus? Parfois, des réparations ou le
+                        remplacement de certaines composantes suffisent. Nous pouvons vous conseiller!
+                    </p>
+                </div>
+                <div class="serviceBloco col-4 col-s-12">
+                    <div class="flex-container flex-row-lg flex-column-s">
+                        <i class="fas fa-car icon"></i>
+                        <h4 class="serviceTitulo">Entretien automobile</h4>
+                    </div>
+                    <p>
+                        Nous pouvons procéder à l’entretien complet de votre voiture, ainsi qu’aux réparations qui
+                        s’imposent. Chez Trans-Mico, pas de réparations inutiles, seulement votre satisfaction, garanti.
+                    </p>
+                </div>
+                <div class="serviceBloco col-4 col-s-12">
+                    <div class="flex-container flex-row-lg flex-column-s">
+                        <i class="fas fa-tint icon"></i>
+                        <h4 class="serviceTitulo">Changement d’huile</h4>
+                    </div>
+                    <p>
+                        Faites changer l’huile, les fluides et les filtres de votre véhicule régulièrement selon les
+                        instructions du fabricant, cela pourrait vous épargner bien des soucis! Nous pouvons vous aider.
+                    </p>
+                </div>
+            </div>
+            <div class="flex-container flex-row align-items-start">
+                <div class="serviceBloco col-4 col-s-12">
+                    <div class="flex-container flex-row-lg flex-column-s">
+                        <i class="fas fa-record-vinyl icon"></i>
+                        <h4 class="serviceTitulo">Pneus et alignement</h4>
+                    </div>
+                    <p>
+                        Ne laissez pas vos pneus s’user prématurément par endroits à cause d’un désalignement,
+                        assurez-vous qu’ils sont bien droits grâce à un alignement informatique. Plus de détails
+                    </p>
+                </div>
+                <div class="serviceBloco col-4 col-s-12">
+                    <div class="flex-container flex-row-lg flex-column-s">
+                        <i class="fas fa-wrench icon"></i>
+                        <h4 class="serviceTitulo">Remplacement des freins</h4>
+                    </div>
+                    <p>
+                        L’importance du rôle des freins d’un véhicule est évidente, mais on laisse trop souvent la
+                        pédale l’usure prendre le pas. Soyez prudents, faites vérifier vos freins régulièrement. Plus de
+                        détails
+                    </p>
+                </div>
+                <div class="serviceBloco col-4 col-s-12">
+                    <div class="flex-container flex-row-lg flex-column-s">
+                        <i class="far fa-thumbs-up icon"></i>
+                        <h4 class="serviceTitulo">Autres services</h4>
+                    </div>
+                    <ul>
+                        <li>Groupe motopropulseur</li>
+                        <li>Suspension</li>
+                        <li>Système électrique</li>
+                        <li>Système d’échappement</li>
+                        <li>Air climatisé</li>
+                        <li>Radiateur</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="flex-container flex-row-lg flex-column-s align-items-start">
+                <div class="col-8 col-s-12 contactBloco">
+                    <h2 class="contTitulo">Certification environnementale</h2>
+                    <div class="flex-container flex-row-lg flex-column-s">
+                        <img src="./IMG/logoCleVerte-2018.png" alt="Logo Cle verte" width="210" height="105">
+                        <p style="padding-left: 20px;">Communiquez avec l’équipe de notre garage automobile Montréal
+                            pour une soumission, pour la
+                            prise d’un rendez-vous ou pour toute autre question.</p>
+                    </div>
+                    <div class="address col-11 col-s-11">
+                        <p style="margin-top: 0;"><strong>Trans-Mico Automotive</strong></p>
+                        <address>9640 boul. Gouin Ouest, <br> Pierrefonds QC H8Y 1R5
+                            514-683-0091
+                        </address>
+                    </div>
+                </div>
+                <div class="col-4 col-s-12 contactBloco">
+                    <h2 class="contTitulo">Écrivez-nous</h2>
+                    <form>
+                        <input type="text" name="nome" id="nome" placeholder="Nom*" class="col-11 col-s-11" required>
+                        <input type="text" name="telefone" id="telefone" placeholder="Téléphone*"
+                            class="col-11 col-s-11" required>
+                        <input type="email" name="email" id="email" placeholder="Email*" class="col-11 col-s-11"
+                            required>
+                        <textarea name="message" id="message" cols="30" rows="3" placeholder="Message"
+                            class="col-11 col-s-11"></textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            2019 © Trans-Mico Automotive | Tous droits réservés
+            <br>
+            Confidentialité | Plan du site
+        </p>
+    </footer>
+
+
+</body>
+<!-- Script Font Awesome -->
+<script src="https://kit.fontawesome.com/be40ef5ecd.js" crossorigin="anonymous"></script>
+
+</html>

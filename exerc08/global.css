@@ -1,0 +1,15 @@
+body{
+    background-image: url("https://cdn.worldvectorlogo.com/logos/aerosmith-1.svg");
+    background-size: 100px;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
+
+.ajuste{
+    background-color: gray;
+    width: 200px;
+    margin-left: 170px;
+}

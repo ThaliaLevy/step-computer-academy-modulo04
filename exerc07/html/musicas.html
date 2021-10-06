@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Músicas Aerosmith</title>
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+
+<body>
+    <nav class="color-black">
+        <div>
+            <img id="img-logo" src="https://www.vippng.com/png/full/58-585257_aerosmith-aerosmith-logo.png">
+        </div>
+        <div id="div-nav">
+            <a href="musicas.html">Músicas</a>
+            <a href="videos.html">Vídeos</a>
+        </div>
+    </nav>
+
+    <div class="color-black session">
+        <img id="img-session" src="https://rockyourwings.com.br/wp-content/uploads/2014/08/post-aero05.jpg">
+        <div class="musica">
+            <audio class="ajuste musica" id="musica" controls="controls">
+                <source src="Aerosmith-Cryin.mp3" type="audio/mp3" />
+                Erro ao carregar o áudio.
+            </audio>
+            <svg class="ajuste2">
+                <img class="icon" src="play_arrow.svg" onclick="play()">
+                <img class="icon" src="pause_black.svg" onclick="pause()">
+                <img class="icon" src="add_black.svg" onclick="volume(+0.1)">
+                <img class="icon" src="remove_black.svg" onclick="volume(-0.1)">
+            </svg>
+        </div>
+    </div>
+</body>
+<script>
+    var musica = document.getElementById("musica");
+
+    function play() {
+        musica.play();
+    }
+
+    function pause() {
+        musica.pause();
+    }
+
+    function volume(valor) {
+        musica.volume += valor;
+    }
+</script>
+
+</html>

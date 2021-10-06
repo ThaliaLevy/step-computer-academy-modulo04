@@ -1,0 +1,8 @@
+Dever de casa
+
+PREZANDO PELA APARÊNCIA
+
+faça um site de uma lanchonete (pode copiar de alguém)
+home, cardapio (pelo menos 5 lanches), como chegar (mapa);
+
+use variávis para cores e tamanhos dos blocos do cardápio.

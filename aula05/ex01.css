@@ -1,0 +1,13 @@
+@import url("var.css");
+
+.navbar{
+    background-color: var(--laranja);
+    color: var(--amarelo);
+    height: 50px;
+    padding: 5px;
+}
+
+h3{
+    margin: 0 0 0 0;
+}
+

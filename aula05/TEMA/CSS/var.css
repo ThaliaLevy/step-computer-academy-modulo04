@@ -1,0 +1,8 @@
+:root{/*root -> global*/
+    --azul:     #3B4E59;/* variável começa com '--' */
+    --amarelo:  #FEC13C;
+    --laranja:  #F26513;
+    --laranja2: #B94312;
+    --marrom:   #732F20;
+    --fontPsize: 1.5em;
+}

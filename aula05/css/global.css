@@ -1,0 +1,59 @@
+@import url("var.css");
+
+body{
+    background-color: var(--preto);
+}
+
+.btn-floating{
+    background-color: var(--marrom2);
+}
+
+label, .label{
+    background-color: var(--marrom2);
+    color: var(--preto);
+    margin-top: 15px;
+}
+
+
+
+.light{
+    background-color: var(--marrom);
+}
+
+img{
+    border: 10px solid whitesmoke;
+    border-top: 100px solid whitesmoke;
+}
+
+.btn-floating{
+    margin-left: -80px;
+}
+
+.material-icons{
+    margin-top: -12px;
+}
+
+header{
+    height: 90px;
+}
+
+label{
+    font-size: 16px;
+}
+
+#id-label{
+    width: 300px;
+}
+
+.container{
+    width: 650px;
+}
+
+footer{
+    text-align: center;
+    height: 100px;
+}
+
+select{
+    margin-top: 10px;
+}

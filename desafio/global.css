@@ -1,0 +1,47 @@
+@import url("var.css");
+
+body{
+    background-color: var(--marrom-claro) !important;
+}
+nav{
+    background-color: var(--laranja);
+    font-size: var(--fontsize);
+}
+
+.nav-link{
+    margin-left: 100px;
+    margin-top: 20px;
+    color: var(--preto);
+}
+
+#nav-link{
+    margin-top: 30px;
+    color: var(--preto);
+}
+
+.banner{
+    background-image: url(https://www.noticiasdaregiao.com.br/wp-content/uploads/2020/09/ViewImage.jpg);
+    background-position: right;
+    height: 600px;
+    width: 100%;
+}
+
+footer{
+margin-top: 400px;
+}
+
+.box {
+    width: calc(60% - 30px);
+    color: var(--amarelo);
+    float: left;
+    background-color: var(--marrom);
+    padding: 20px;
+    border-radius: 40px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+#fim-pg{
+    background-color: var(--marrom);
+    height: 100px;
+}

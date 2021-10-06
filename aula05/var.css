@@ -1,0 +1,8 @@
+:root{ /*definir padrão global*/
+    --fundoAzul: #3B4E59; /*variavel começa com -- */
+    --fundoAmarelo: #FEC13C;
+    --laranja: #F26513;
+    --laranja2: #B94312;
+    --marrom: #732F20;
+    --fontsize: 1.5em;
+}

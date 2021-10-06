@@ -1,0 +1,81 @@
+@import url("var.css");
+
+body{
+    background-color: var(--branco) !important;
+}
+nav{
+    background-color: var(--branco);
+    font-size: var(--fontsize);
+    height: 100px;
+}
+
+.nav-link{
+    margin-left: 100px;
+    color: var(--preto);
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    transition: all 300ms !important;
+    transition-property: all !important;
+    transition-duration: 300ms !important;
+    transition-timing-function: ease !important;
+    transition-delay: 0s !important;
+}
+
+#nav-link{
+    margin-top: 20px;
+    color: var(--preto);
+}
+
+.banner{
+    background-image: url(https://www.gestaoessencial.com.br/wp-content/uploads/2020/07/familia-feliz-dinheiro.jpg);
+    background-position: auto center;
+    height: 500px;
+    width: 100%;
+    border-bottom: 10px solid var(--azul);
+}
+
+footer{
+margin-top: 400px;
+}
+
+button{
+    background-color: orangered;
+    color: var(--branca);
+}
+
+#espaco{
+    height: 70px;
+}
+
+h2,h6{
+    color: var(--branco); 
+    margin-left: 150px;
+
+}
+
+.input{
+    margin-left: 250px;
+}
+
+.box {
+    width: calc(60% - 30px);
+    color: var(--branco);
+    float: left;
+    background-color: var(--azul);
+    padding: 20px;
+    border-radius: 40px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+#fim-pg{
+    background-color: var(--azul);
+    height: 100px;
+}

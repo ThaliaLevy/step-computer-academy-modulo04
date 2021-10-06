@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming de midia</title>
+</head>
+
+<body>
+    <h1>Streaming</h1>
+    <div>
+        <audio id="musica" controls="controls" autoplay="autoplay">
+            <source src="../../../Downloads/Aerosmith-Cryin.mp3" type="audio/mp3" />
+            Erro ao carregar o áudio.
+        </audio>
+        <div>
+            <button onclick="play()">Play</button>
+            <button onclick="pause()">Pause</button>
+            <button onclick="volume(+0.1)">+Vol</button>
+            <button onclick="volume(-0.1)">-Vol</button>
+        </div>
+    </div>
+</body>
+<script>
+    var musica = document.getElementById("musica");
+
+    function play() {
+        musica.play();
+    }
+
+    function pause() {
+        musica.pause();
+    }
+
+    function volume(valor) {
+        musica.volume += valor;
+    }
+</script>
+
+</html>

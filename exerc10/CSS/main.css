@@ -1,0 +1,145 @@
+@import url(./md.css)(max-width: 768px);
+@import url(./lg.css)(min-width: 769px);
+@import url(./var.css);
+
+@media screen and (min-width: 769px) and (orientation: landscape) {
+    body {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    body {
+        margin: auto;
+        width: 90%;
+    }
+}
+
+.flex-container{
+    display:flex;
+    align-items: center;
+  }
+
+  .align-items-start{
+      align-items:flex-start !important;
+  }
+
+
+  .flex-row{
+      flex-direction: row;
+  }
+
+  .flex-column{
+      flex-direction: column;
+  }
+
+.welcomeImage {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.image {
+    max-width: 100vw;
+    height: auto;
+}
+
+.presTitulo, 
+.servTitulo,
+.listTitulo,
+.serviceTitulo,
+.contTitulo {
+    text-align: center;
+    font-family: var(--fontFamily);
+    font-weight: 400;
+    color: var(--colorText);
+}
+
+p, ul{
+    font-family: var(--fontFamily);
+    color: var(--colorText);
+}
+
+.icon{
+    line-height: 2.85em !important;
+    font-size: 2.85em;
+}
+
+.presVideo{
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 */
+    height: 0;
+}
+
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#listaServices{
+    margin-block: 40px;
+    background-color: lightgray;
+    border: solid var(--colorText) 1px;
+}
+
+#contact{
+
+    background-color: #ffc958;
+}
+
+.listTitulo,
+.serviceTitulo {
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+.contTitulo{
+    text-align: left !important;
+}
+
+.serviceBloco{
+    border-top: solid var(--colorText) 1px;
+    padding-inline: 20px;
+}
+
+.contactBloco{
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.address{
+    border-top: solid 1px var(--colorText);
+    border-bottom: solid 1px var(--colorText);
+}
+
+input, textarea{
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+input:placeholder-shown,
+textarea:placeholder-shown{
+    font-family: var(--fontFamily);
+}
+
+button{
+    font-family: var(--fontFamily);
+    background-color: #573b0c;
+    color: white;
+    border: none;
+    padding: 8px 15px 8px 15px;
+}
+
+footer{
+    background-color: rgba(0,0,0,.4);
+    padding: 25px 0;
+    font-size: .9em;
+    color: bababa;
+    padding-left: 40px;
+}

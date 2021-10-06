@@ -1,0 +1,6 @@
+:root{ /*definir padrão global*/
+    --preto: #0D0D0D; /*variavel começa com -- */
+    --marrom: #593911;
+    --marrom2: #735826;
+    --fontsize: 1.5em;
+}

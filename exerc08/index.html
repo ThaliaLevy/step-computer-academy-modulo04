@@ -1,0 +1,266 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Site de Vídeos</title>
+  <!-- CSS only-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="global.css">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+
+          <strong>Galeria vídeos Aerosmith</strong>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <div class="album py-5">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+
+              <img src="https://i.ytimg.com/vi/JkK8g6FMEXE/maxresdefault.jpg" data-bs-toggle="modal"
+                data-bs-target="#imageModal">
+
+              <div class="modal fade" id="imageModal" aria-labelledly="imageModalLabel" aria-hidden="true"
+                style="width: 650px; margin-left: 300px;">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="label1">I don't wanna miss a thing</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="pause1()">
+                      </button>
+                    </div>
+
+                    <div class="modal-body">
+                      <video height="300px" width="500px" controls id="musica1">
+                        <source src="Aerosmith-I-Dont-Want-to-Miss-a-Thing.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                    <br>
+                    <div class="ajuste">
+                      <svg class="icon">
+                        <img class="icon" src="play_arrow.svg" onclick="play1()">
+                        <img class="icon" src="pause_black.svg" onclick="pause1()">
+                        <img class="icon" src="add_black.svg" onclick="volume1(+0.1)">
+                        <img class="icon" src="remove_black.svg" onclick="volume1(-0.1)">
+                      </svg>
+                    </div>
+                    <br><br>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="pause1()">
+                        Fechar modal
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">I don't wanna miss a thing</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button data-bs-toggle="modal" data-bs-target="#imageModal">Abrir vídeo</button>
+                  </div>
+                  <small class="text-muted">5 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+
+              <img src="https://i.ytimg.com/vi/RqQn2ADZE1A/mqdefault.jpg" data-bs-toggle="modal"
+                data-bs-target="#imageModal2">
+
+              <div class="modal fade" id="imageModal2" aria-labelledly="imageModalLabel" aria-hidden="true" style="width: 650px; margin-left: 300px;">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="label1">Janie's got a gun</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="pause2()">
+                      </button>
+                    </div>
+
+                    <div class="modal-body">
+                      <video height="300px" width="500px" controls id="musica2">
+                        <source src="Aerosmith-Janies-got-a-Gun.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+
+                    <br>
+                    <div class="ajuste">
+                      <svg class="icon">
+                        <img class="icon" src="play_arrow.svg" onclick="play2()">
+                        <img class="icon" src="pause_black.svg" onclick="pause2()">
+                        <img class="icon" src="add_black.svg" onclick="volume2(+0.1)">
+                        <img class="icon" src="remove_black.svg" onclick="volume2(-0.1)">
+                      </svg>
+                    </div>
+                    <br><br>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="pause2()">
+                        Fechar modal
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">Janie's got a gun</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button data-bs-toggle="modal" data-bs-target="#imageModal2">Abrir vídeo</button>
+                  </div>
+                  <small class="text-muted">5 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZS_hiR2zEc0xi7ZUhAUKAhII2ELtS1pK0kA&usqp=CAU"
+                data-bs-toggle="modal" data-bs-target="#imageModal3">
+
+              <div class="modal fade" id="imageModal3" aria-labelledly="imageModalLabel" aria-hidden="true" style="width: 650px; margin-left: 300px;">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="label1">Título da Modal</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="pause3()">
+                      </button>
+                    </div>
+
+                    <div class="modal-body">
+                      <video height="300px" width="500px" controls id="musica3">
+                        <source src="Hole-in-my-soul-Aerosmith.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+
+                    <br>
+                    <div class="ajuste">
+                      <svg class="icon">
+                        <img class="icon" src="play_arrow.svg" onclick="play3()">
+                        <img class="icon" src="pause_black.svg" onclick="pause3()">
+                        <img class="icon" src="add_black.svg" onclick="volume3(+0.1)">
+                        <img class="icon" src="remove_black.svg" onclick="volume3(-0.1)">
+                      </svg>
+                    </div>
+                    <br><br>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="pause3()">
+                        Fechar modal
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">Hole in my soul</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button data-bs-toggle="modal" data-bs-target="#imageModal3">Abrir vídeo</button>
+                  </div>
+                  <small class="text-muted">7 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    var musica1 = document.getElementById("musica1");
+
+    function play1() {
+      musica1.play();
+    }
+
+    function pause1() {
+      musica1.pause();
+
+    }
+
+    function volume1(valor) {
+      musica1.volume += valor;
+    }
+
+    var musica2 = document.getElementById("musica2");
+
+    function play2() {
+      musica2.play();
+    }
+
+    function pause2() {
+      musica2.pause();
+    }
+
+    function volume2(valor) {
+      musica2.volume += valor;
+    }
+
+    var musica3 = document.getElementById("musica3");
+
+    function play3() {
+      musica3.play();
+    }
+
+    function pause3() {
+      musica3.pause();
+    }
+
+    function volume3(valor) {
+      musica3.volume += valor;
+    }
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <script src="js/modais.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+</body>
+
+</html>

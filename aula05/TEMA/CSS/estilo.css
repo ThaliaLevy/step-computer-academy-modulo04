@@ -1,0 +1,15 @@
+@import url("var.css");/*obrigatóriamente na primeira linha*/
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+/*estilo global */
+
+.navbar{
+    background-color: var(--laranja);
+    color: var(--amarelo);
+    height: 50px;
+    padding: 5px;
+    font-size: var(--fontPsize);
+}
