@@ -1,0 +1,20 @@
+[class*="reaction-"] {
+    border: none;
+    background-image: url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yh/r/sqhTN9lgaYm.png);
+    background-color: transparent;
+    display: block;
+    cursor: pointer;
+    height: 48px;
+    position: absolute;
+    width: 48px;
+    z-index: 11;
+    top: -28;
+    transform-origin: 50% 100%;
+    transform: scale(0.1);
+    transition: all 0.3s;
+    outline: none;
+    will-change: transform;
+    opacity: 0;
+    }
+
+    

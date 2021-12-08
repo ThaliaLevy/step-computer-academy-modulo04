@@ -1,0 +1,32 @@
+@-moz-keyframes animaDiv{
+    0%{background-color: green; left: 0; top: 0;}
+    50%{background-color: yellow; left: 250px; top: 250px;}
+    75%{background-color: red; left: 0; top: 250px;}
+    100%{background-color: pink; left: 0; top: 0;}
+}
+
+@-webkit-keyframes animaDiv{
+    0%{background-color: green; left: 0; top: 0;}
+    50%{background-color: yellow; left: 250px; top: 250px;}
+    75%{background-color: red; left: 0; top: 250px;}
+    100%{background-color: pink; left: 0; top: 0;}
+}
+
+@keyframes animaDiv{
+    0%{background-color: green; left: 0; top: 0;}
+    50%{background-color: yellow; left: 250px; top: 250px; opacity: 0.5;}
+    75%{background-color: red; left: 0; top: 250px; transform: scale(0.5);}
+    100%{background-color: pink; left: 0; top: 0; transform: scale(1);  opacity: 1;}
+}
+
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: turquoise;
+    position: relative;
+    animation: animaDiv 10s;
+    -moz-animation: animaDiv 10s;
+    -webkit-animation: animaDiv 10s;
+    -o-animation: animaDiv 10s;
+}

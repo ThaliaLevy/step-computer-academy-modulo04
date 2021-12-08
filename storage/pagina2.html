@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+</head>
+
+<body>
+
+    crie um formulário que cadastre pessoas. após o formulário exiba as pessoas cadastradas
+    <!--  let seila = [];
+    seila.push(p1);
+    -->
+
+    <hr>
+
+    <form>
+        <div><label>Nome</label><input id="nome" type="text" required></div>
+        <div><label>Idade</label><input id="idade" type="number" required></div>
+        <div><label>Sexo</label><input id="sexo" type="text" required></div>
+        <input type="submit" value="CADASTRAR" onclick="cadastrar()">
+    </form>
+
+    <hr>
+
+    <div id="cadastrados"></div>
+
+</body>
+<script>
+    let outraVariavel = localStorage.getItem('nome');
+    document.writeln("Olá " + outraVariavel);
+    let p1 = JSON.parse(sessionStorage.getItem("pessoa1"));
+    let p2 = sessionStorage.getItem("pessoa2");
+    console.log(p1);
+    console.log(p2);
+    sessionStorage.clear();
+    var pessoas = [];
+
+    class Pessoa {
+        nome;
+        idade;
+        sexo;
+
+        constructor(nome, idade, sexo) {
+            this.nome = nome;
+            this.idade = idade;
+            this.sexo = sexo;
+        }
+    }
+
+    if (localStorage.getItem("pessoas") != null) {
+        pessoas = JSON.parse(localStorage.getItem("pessoas"));
+        console.log(pessoas)
+
+        let texto = "";
+
+        for (let i = 0; i < pessoas.length; i++) {
+            texto += "Nome: " + pessoas[i].nome + "<br>" +
+                "Idade: " + pessoas[i].idade + "<br>" +
+                "Sexo: " + pessoas[i].sexo + "<br><hr>";
+        }
+
+        document.getElementById("cadastrados").innerHTML = texto;
+    }
+
+
+    function cadastrar() {
+        pessoas.push(new Pessoa(document.getElementById("nome").value,
+            document.getElementById("idade").value,
+            document.getElementById("sexo").value));
+
+        localStorage.setItem("pessoas", JSON.stringify(pessoas));
+    }
+
+
+
+</script>
+
+</html>

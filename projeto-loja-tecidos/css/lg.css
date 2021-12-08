@@ -1,0 +1,353 @@
+@import url("var.css");
+
+nav{
+    font-size: 18px;
+    height: 90px;
+}
+
+#banner-index{ 
+    opacity: 60%;
+}
+
+#banner{
+    width: 100%;
+    opacity: 75%;
+    position: absolute;
+    height: 550px;
+}
+
+iframe{
+    width: 1200px;
+    height: 200px;
+}
+
+#atendente{
+    width: 300px;
+    height: 200px;
+}
+
+.atendente{
+    position: absolute;
+    margin-top: 600px;
+}
+
+#logo{
+    width: 200px;
+    height: 200px;
+    margin-left: 150px;
+    position: relative;
+}
+
+.space{
+    width: 250px;
+}
+
+.nav-item{
+    padding-left: 20px;
+}
+
+.bloco{
+    position: absolute;
+    background-color: var(--branco);
+    width: 550px;
+    height: 420px;
+    margin-top: 90px;
+    margin-left: 30%;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    z-index: 20;
+}
+
+#bloco-area{
+    position: absolute;
+    width: 50%;
+    padding: 20px;
+    padding-top: 150px;
+    text-align: center;
+    height: 550px;
+    z-index: 20;
+    background-color: var(--azul-claro);
+}
+
+#banner-area{
+    width: 50%; 
+    margin-left: 50%;
+    position: absolute;
+    height: 550px;
+}
+
+#bloco-index{
+    position: absolute;
+    width: 800px;
+    height: 200px;
+    margin-top: 200px;
+    margin-left: 20%;
+    text-align: center;
+    z-index: 20;
+}
+
+#checkbox{
+    font-size: 12px;
+    margin-left: -90px;
+}
+
+.checkbox{
+    margin-left: -80px;
+}
+
+button{
+    width: 120px;
+}
+
+.p{
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}
+
+h5{
+    text-align: center;
+}
+
+input, select{
+    width: 210px;
+}
+
+.carousel{
+    height: 550px;
+}
+
+#carousel-control-prev, #carousel-control-prev-icon, #carousel-control-next, #carousel-control-next-icon {
+    height: 550px;
+}
+
+#section-index{
+    height: 1000px;
+}
+
+.frete-gratis{
+    color: var(--azul);
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 20px;
+    z-index: 20;
+    text-shadow: 0 1px 2px black(0,0,0,.6);
+    font-size: 58px;
+}
+
+.frete-gratis-subtitle{
+    color: var(--azul);
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+    z-index: 20;
+    text-shadow: 0 1px 2px black(0,0,0,.6);
+    font-size: 20px;
+}
+
+#centralizar-mais-vendidos{
+    text-align: center;
+}
+
+#mais-vendidos-subtitle{
+    color: var(--azul);
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+    z-index: 20;
+    text-shadow: 0 1px 2px black(0,0,0,.6);
+    font-size: 15px;
+}
+
+#mais-vendidos{
+    color: var(--azul);
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 8px;
+    z-index: 20;
+    text-shadow: 0 1px 2px black(0,0,0,.6);
+    font-size: 45px;
+}
+
+.img-verde{
+    width: 100%;
+}
+
+.conteiner{
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 5%;
+}
+
+.conteiner-form{
+    width: 90%;
+    margin-top: 600px;
+    margin-left: 5%;
+    position: absolute;
+}
+
+h3, h4{
+    letter-spacing: 5px;
+    color: var(--preto-opaco);
+} 
+
+.texto1{
+    text-align: center;
+    width: 38%;
+    color: var(--cinza);
+    margin-top: 100px;
+    margin-bottom: 80px;
+    margin-left: 30%;
+}
+
+.texto2{
+    text-align: center;
+    width: 70%;
+    color: var(--cinza);
+    margin-top: 100px;
+    margin-bottom: 80px;
+    margin-left: 15%;
+}
+
+
+#mapa{
+    margin-top: 40px;
+    margin-left: -350px;
+}
+
+#footer-login{
+    margin-top: 700px;
+    background-color: var(--azul-escuro);
+    height: 220px;
+    font-size: 15px;
+    color: var(--cinza-claro);
+}
+
+#footer-form{
+    margin-top: 1800px;
+    background-color: var(--azul-escuro);
+    height: 300px;
+    font-size: 15px;
+    color: var(--cinza-claro);
+}
+
+#footer-fotos{
+    margin-top: 0px;
+    background-color: var(--azul-escuro);
+    height: 220px;
+    font-size: 15px;
+    color: var(--cinza-claro);
+}
+
+#footer-index{
+    margin-top: 900px;
+    background-color: var(--azul-escuro);
+    height: 220px;
+    font-size: 15px;
+    color: var(--cinza-claro);
+}
+
+.categorias1{
+    margin-left: 5%;
+}
+
+.icon, .icone-pagamento{
+    width: 20px;
+    height: 20px;
+}
+
+.titulo{
+    margin-left: 30px;
+    color: var(--cinza-claro);
+}
+
+.categorias2{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -170px;
+}
+
+.li{
+    color: var(--cinza-claro);
+    font-size: 15px;
+}
+
+.categorias3{
+    position: absolute;
+    margin-left: 60%;
+    margin-top: -170px;
+}
+
+.categorias4{
+    position: absolute;
+    margin-left: 80%;
+    margin-top: -170px;
+}
+
+.banner {
+    background-image: url(https://11904.cdn.simplo7.net/static/11904/sku/thumb_tricoline-tecido-tricoline-fio-tinto-vichy-xadrez-g-azul-claro-1629999317703.jpeg);
+}
+
+#bt-visualizar{
+    font-size: 15px;
+    width: 100%;
+}
+
+#endereco, .endereco {
+    width: 207%;
+}
+
+.dropdown{
+    width: 100px;
+}
+
+.none{
+    display: none;
+    position: absolute;
+}
+
+.block{
+    display: block;
+    position: absolute;
+}
+
+#dados-usuario{
+    font-size: 25px;
+    text-align: justify;
+
+}
+
+#ajusteOpTecido, #ajusteOpTecido1, #ajusteOpTecido2  {
+    position: absolute;
+    margin-top: 110px;
+    width: 93%;
+}
+
+#ajustePreco{
+    margin-top: 212px;
+}
+
+#bt{
+    width: 200px;
+    position: absolute;
+    margin-left: -100px;
+}
+
+.textarea{
+    margin-top: 80px;
+}
+
+#footer-area{
+    margin-top: 700px;
+    background-color: var(--azul-escuro);
+    height: 220px;
+    font-size: 15px;
+    color: var(--cinza-claro);
+}
+
+#usuario-logado2{
+    font-size: 18px;
+}
+
+.form-check{
+    text-align: justify;
+    margin-left: 140px;
+}

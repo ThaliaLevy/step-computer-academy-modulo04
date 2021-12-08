@@ -1,0 +1,21 @@
+@import url(./md.css)(max-width: 768px);
+@import url(./lg.css)(min-width: 769px);
+
+@media screen and (min-width: 769px) and (orientation: landscape) {
+    body {
+        background-color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    body {
+        background-color: white;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+*{
+    margin: 0px;
+}
+

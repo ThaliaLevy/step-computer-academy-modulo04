@@ -1,0 +1,9 @@
+:root{
+    --branco: white;
+    --azul-claro: rgba(217, 249, 253, 0.87);
+    --azul: rgb(64, 145, 160);
+    --preto-opaco: rgba(0, 0, 0, 0.63);
+    --cinza: gray;
+    --azul-escuro: rgb(21, 83, 94);
+    --cinza-claro: rgba(255, 255, 255, 0.76);
+}

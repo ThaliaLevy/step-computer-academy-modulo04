@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reações</title>
+    <link rel="stylesheet" href="estilo.css" type="text/css">
+</head>
+
+<body>
+    <div class="box">
+        <div id="marcado">vcsasssskdfgjdfjgkdlfgfgdfhdfhdhdfdfhdh</div>
+        <input type="checkbox" id="like" class="field-reacetions">
+        <span class="text-desc">Campos de reações</span>
+        <label for="like" class="label-reactions">Like</label>
+        <div class="toolbox"></div>
+        <label for="like" class="overlay"></label>
+
+        <button class="reaction-like" id="reaction-like" onclick="click()"><span class="legend-reaction">Like</span></button>
+        <button class="reaction-love"><span class="legend-reaction">Like</span></button>
+        <button class="reaction-haha"><span class="legend-reaction">Haha</span></button>
+        <button class="reaction-wow"><span class="legend-reaction">Wow</span></button>
+        <button class="reaction-sad"><span class="legend-reaction">Sad</span></button>
+        <button class="reaction-angry"><span class="legend-reaction">Angry</span></button>
+    </div>
+    
+</body>
+
+
+
+<script type="text/javascript">
+    function click(){
+          var destino = document.getElementById("reaction-like");
+          destino.value = document.getElementById("marcado").value;
+    }
+</script>
+
+</html>

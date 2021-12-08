@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Tecidos</title>
+
+    <link rel="stylesheet" href="../css/global.css" type="text/css">
+
+    <!-- Para utilizar o Bootstrap > CSS e JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="verificarLogin()">
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="../index.html"><img id="logo"
+                    src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2013%2F06%2F10%2F12%2FLogo-e-Cartao-LV-111173_593_051825741_1547277220.jpg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active space">
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Página principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria-fotos.html">Galeria de fotos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Compre seu tecido</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link block" href="login.html" id="usuario-logado"></a>
+
+                        <div class="dropdown none" id="aux-usuario">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <label id="usuario-logado2"></label>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="area-usuario.html">Minha área</a>
+                                <a class="dropdown-item" href="../index.html" onclick="deslogar()">Sair</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <img id="banner-area"
+            src="https://www.academiaferoli.com.br/thumbs-1/114214_imgs-Metade-quintal-de-importa%C3%A7%C3%A3o-de-algod%C3%A3o-tecido-de.jpeg">
+        <div id="bloco-area">
+            <h4><b>MEUS DADOS</b></h4><br>
+            <div id="dados-usuario">
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-area">
+        <br><br>
+        <div class="categorias1">
+            <span class="titulo">CATEGORIAS</span>
+            <ul>
+                <li style="list-style: none;"><br></li>
+                <li>
+                    <a class="li" href="https://www.lojadetecidos.com.br/tecidos-para-artesanato">
+                        Artesanato
+                    </a>
+                </li>
+                <li>
+                    <a class="li" href="https://www.lojadetecidos.com.br/tecidos-para-decoracao">
+                        Decoração
+                    </a>
+                </li>
+                <li>
+                    <a class="li" href="https://www.lojadetecidos.com.br/tecidos-para-roupas">
+                        Tecidos para Vestuário
+                    </a>
+                </li>
+                <li>
+                    <a class="li" href="https://www.lojadetecidos.com.br/malhas">
+                        Malhas
+                    </a>
+                </li>
+                <li>
+                    <a class="li" href="https://www.lojadetecidos.com.br/tecidos-especificos">
+                        Diversos
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="categorias2">
+            <span class="titulo">PRECISA DE AJUDA?</span>
+            <ul class="contact">
+                <li style="list-style: none;"><br></li>
+                <li>
+                    <a class="li">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.258 16.725">
+                            <g transform="translate(-2.95)">
+                                <path
+                                    d="M112.4,2.191A7.431,7.431,0,0,0,107.11,0a.593.593,0,1,0,0,1.185,6.295,6.295,0,0,1,6.3,6.3.593.593,0,0,0,1.185,0A7.431,7.431,0,0,0,112.4,2.191Z"
+                                    transform="translate(-95.383)"></path>
+                                <path
+                                    d="M109.961,47.615a.593.593,0,0,0,1.185,0,4.042,4.042,0,0,0-4.037-4.037h0a.593.593,0,0,0,0,1.185A2.855,2.855,0,0,1,109.961,47.615Z"
+                                    transform="translate(-95.383 -40.134)"></path>
+                                <path
+                                    d="M13.267,39.823a1.789,1.789,0,0,0-1.584.948.593.593,0,1,0,.978.669c.261-.381.379-.441.539-.434a7.635,7.635,0,0,1,2.736,2,.613.613,0,0,1-.006.433,2.046,2.046,0,0,1-1.016,1.279,1.9,1.9,0,0,1-1.523-.051,16.752,16.752,0,0,1-5.5-3.578l0,0A16.749,16.749,0,0,1,4.323,35.6a1.9,1.9,0,0,1-.052-1.524A2.045,2.045,0,0,1,5.55,33.064a.612.612,0,0,1,.432-.006,7.649,7.649,0,0,1,2,2.731c.009.166-.052.284-.433.545a.593.593,0,0,0,.669.979,1.788,1.788,0,0,0,.948-1.586A7.256,7.256,0,0,0,6.4,31.947a1.792,1.792,0,0,0-1.224-.007,3.19,3.19,0,0,0-1.979,1.645,3.051,3.051,0,0,0,.031,2.465,17.928,17.928,0,0,0,3.832,5.881l.012.012a17.933,17.933,0,0,0,5.874,3.826,3.517,3.517,0,0,0,1.323.276,2.717,2.717,0,0,0,1.141-.245,3.19,3.19,0,0,0,1.645-1.979,1.793,1.793,0,0,0-.006-1.221A7.254,7.254,0,0,0,13.267,39.823Z"
+                                    transform="translate(0 -29.32)"></path>
+                            </g>
+                        </svg> Telefone: (16) 99769-6130
+                    </a>
+                </li>
+                <li class="tel-whatsapp">
+                    <a class="li" href="https://api.whatsapp.com/send?phone=5516997696130" target="_blank">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.371 16.372">
+                            <path
+                                d="M3.96,15.2a8.126,8.126,0,0,0,4.2,1.162,8.228,8.228,0,0,0,8.215-8.183,8.183,8.183,0,1,0-15.2,4.229L0,16.371ZM.965,8.183a7.189,7.189,0,1,1,3.323,6.1L4.1,14.161l-2.686.792.792-2.686-.118-.184A7.223,7.223,0,0,1,.965,8.183Zm0,0">
+                            </path>
+                            <path
+                                d="M121.239,96.377a7.229,7.229,0,0,0,5.8,5.8c.953.181,2.35.209,3.033-.474l.381-.381a1.018,1.018,0,0,0,0-1.44l-1.523-1.523a1.018,1.018,0,0,0-1.44,0l-.381.381a.677.677,0,0,1-.906,0l-1.519-1.583-.007-.007a.6.6,0,0,1,0-.845l.381-.381a1.017,1.017,0,0,0,0-1.44l-1.523-1.523a1.019,1.019,0,0,0-1.44,0l-.381.381h0A3.55,3.55,0,0,0,121.239,96.377Zm1.152-2.355c.4-.391.378-.4.422-.4a.059.059,0,0,1,.042.017c1.6,1.613,1.54,1.519,1.54,1.565a.058.058,0,0,1-.017.042l-.381.381a1.556,1.556,0,0,0,0,2.2l1.52,1.584.007.007a1.636,1.636,0,0,0,2.265,0l.381-.381a.059.059,0,0,1,.083,0c1.6,1.613,1.54,1.518,1.54,1.565a.057.057,0,0,1-.017.042l-.381.381a2.837,2.837,0,0,1-2.176.211,6.27,6.27,0,0,1-5.035-5.035A2.836,2.836,0,0,1,122.392,94.022Zm0,0"
+                                transform="translate(-117.254 -89.702)"></path>
+                        </svg> Whatsapp: (16) 99769-6130
+                    </a>
+                </li>
+                <li>
+                    <a class="li">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.227 11.039">
+                            <g transform="translate(0 -38.529)">
+                                <path
+                                    d="M41.35,68.654,36.1,73.285l-5.256-4.63a.5.5,0,1,0-.667.758l5.59,4.925a.5.5,0,0,0,.668,0l5.588-4.925a.5.5,0,1,0-.668-.757Z"
+                                    transform="translate(-27.981 -27.98)"></path>
+                                <path
+                                    d="M14.712,38.529H1.515A1.516,1.516,0,0,0,0,40.044v8.01a1.516,1.516,0,0,0,1.515,1.515h13.2a1.516,1.516,0,0,0,1.515-1.515v-8.01A1.516,1.516,0,0,0,14.712,38.529Zm.5,9.525a.505.505,0,0,1-.5.5H1.515a.505.505,0,0,1-.5-.5v-8.01a.505.505,0,0,1,.5-.5h13.2a.505.505,0,0,1,.5.5Z"
+                                    transform="translate(0 0)"></path>
+                            </g>
+                        </svg> E-mail: contato@lojadetecidos.com.br
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="categorias3">
+            <span class="titulo">PAGUE TAMBÉM COM</span>
+            <br><br>
+            <div>
+                <img src="https://cdn.awsli.com.br/production/static/img/formas-de-pagamento/boleto-logo.png?v=78cead3"
+                    alt="PagSeguro V2">
+            </div><br>
+            <div>
+                <img src="https://cdn.awsli.com.br/production/static/img/formas-de-pagamento/pagsegurov2-logo.png?v=78cead3"
+                    alt="PagSeguro V2">
+            </div>
+        </div>
+        <div class="categorias4">
+            <span class="titulo cor-secundaria">SELOS</span>
+            <br><br>
+            <div>
+                <img src="https://cdn.awsli.com.br/production/static/img/struct/stamp_encryptssl.png" alt="Site Seguro">
+            </div><br>
+            <div>
+                <a href="http://www.google.com/safebrowsing/diagnostic?site=www.lojadetecidos.com.br"
+                    title="Google Safe Browsing" target="_blank">
+                    <img src="https://cdn.awsli.com.br/production/static/img/struct/stamp_google_safe_browsing.png"
+                        alt="Google Safe Browsing">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="../js/Js.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function inserirDados() {
+
+        pessoas = JSON.parse(sessionStorage.getItem("pessoas"));
+        console.log(pessoas)
+
+        let texto =
+            "<hr>Nome: " + pessoas[0].nome + "<br>" +
+            "E-mail: " + pessoas[0].email + "<br>" +
+            "Data nascimento: " + pessoas[0].date + "<br><hr>";
+
+
+        document.getElementById("dados-usuario").innerHTML = texto;
+
+        console.log("DOM completamente carregado e analisado");
+    });
+</script>
+
+
+
+</html>

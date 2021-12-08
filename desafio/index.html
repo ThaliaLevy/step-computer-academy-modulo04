@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="index.css" type="text/css">
 
     <!-- Para utilizar o Bootstrap > CSS e JS -->
@@ -29,13 +33,13 @@
                         height="50"></a>
             </li>
             <li class="nav-item active" id="nav-link">
-                <a class="nav-link" href="index.html">Adesão</a>
+                <a class="nav-link bg-light" href="index.html">Adesão</a>
             </li>
             <li class="nav-item active" id="nav-link">
-                <a class="nav-link" href="index.html">Empresarial</a>
+                <a class="nav-link bg-light" href="index.html">Empresarial</a>
             </li>
             <li class="nav-item active" id="nav-link">
-                <a class="nav-link" href="index.html">Familiar</a>
+                <a class="nav-link bg-light" href="index.html">Familiar</a>
             </li>
         </ul>
     </nav>
@@ -52,19 +56,69 @@
                 <input type="text" placeholder="Número de vidas" aria-label="Número de vidas"><br><br>
                 <button type="button"> SIMULAR AGORA</button>
             </div>
-            
+
 
         </div>
-        <div class="box">
-            <h1></h1>
+        <span class="box">
+            <svg>
+                <img id="svg" src="payments_black_24dp.svg">
+            </svg>
+            <h4>PREÇOS E CONDIÇÕES<br> IMPERDÍVEIS </h4>
             <p>
-
+                Condições especiais e preços que<br> cabem no seu bolso
             </p>
+        </span>
+        <span class="box">
+            <svg>
+                <img id="svg" src="health_and_safety_black_24dp.svg">
+            </svg>
+            <h4>OS MELHORES PLANOS PARA SUA<br> SAÚDE</h4>
+            <p>
+                Maiores redes de médicos, clínicas, <br> hospitais e laboratórios.
+            </p>
+        </span>
+        <span class="box">
+            <svg>
+                <img id="svg" src="support_agent_black_24dp.svg">
+            </svg>
+            <h4>SUPORTE DE PLANTÃO DE 07:00 às <br>23:00</h4>
+            <p>
+                Nossos especialistas estão sempre<br> prontos para lhe atender.
+            </p>
+        </span>
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="https://idealplanos.com.br/wp-content/uploads/2020/04/importancia_do_plano_de_saude.jpg"
+                        alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://www.economus.com.br/wp-content/uploads/2020/12/banner-1.jpg"
+                        alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://www.planodesaude.net/wp-content/uploads/2019/07/plano-saude-20.jpg"
+                        alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </section>
 
     <footer>
-        <div id="fim-pg"></div>
+        <div id="fim-pg"><br>
+            REDUZA O VALOR DO PLANO EM ATÉ 40%
+        </div>
     </footer>
 
 </body>

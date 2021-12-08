@@ -1,0 +1,71 @@
+.nav{
+    height: 70px;
+    padding-top: 30px;
+    padding-left: 20px;
+    background-color: black;
+}
+
+#logo{
+    width: 120px;
+    height: 40px;
+}
+
+.bloco-azul{
+    background-color: rgb(0, 34, 109);
+    height: 100%;
+}
+
+a{
+    margin-left: 30px;
+    color: white;
+}
+
+#ajuste1{
+    margin-top: -50px;
+    margin-left: 150px;
+}
+
+#ajuste2{
+    margin-left: 150px;
+}
+
+.bloco-branco{
+    background-color: white;
+    height: 10px;
+}
+
+#carro{
+    width: 100%;
+}
+
+.img-moca{
+    width: 100%;
+}
+
+.texto{
+    margin-top: 15px;
+    background-color: rgb(84, 91, 107);
+    border-radius: 40px;
+    margin-left: 10px;
+    padding: 10px;
+    padding-top: 30px;
+    width: 130px;
+    color: white;
+    font-size: 10px;
+    height: 80px;
+    text-align: justify;
+}
+
+.texto2{
+    margin-top: -120px;
+    background-color: rgb(84, 91, 107);
+    border-radius: 40px;
+    margin-left: 180px;
+    padding: 10px;
+    padding-top: 30px;
+    width: 130px;
+    color: white;
+    font-size: 10px;
+    height: 80px;
+    text-align: justify;
+}
