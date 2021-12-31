@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="quadro" style="background:beige; cursor: crosshair;"></canvas>
+</body>
+
+<script>
+    window.onload = function () {
+        var largura = 500;
+        var altura = 300;
+
+        var quadro = document.getElementById("quadro");
+        quadro.setAttribute("width", largura); // em JQuery -> $("#quadro").attr("width",largura);
+        quadro.setAttribute("height", altura);
+    
+
+        var ctx = quadro.getContext("2d");
+
+        var desenhando = false;// booleano para saber se o mouse está pressionado ou não
+
+        quadro.onmousedown = function (evt) {
+            let rect = this.getBoundingClientRect();
+
+            ctx.moveTo(evt.clientX - rect.left , evt.clientY - rect.top);
+            desenhando = true;//quando o mouse for pressionado, desenhando recebe true
+        }
+
+        quadro.onmouseup = function () {
+            desenhando = false;//quando soltar o mouse, desenhando recebe false
+        }
+
+        quadro.onmousemove = function (evt) {
+            if (desenhando) {//fazer a linha apenas se o mouse estiver pressionado!
+                let rect = this.getBoundingClientRect();
+
+                ctx.lineTo(evt.clientX - rect.left, evt.clientY - rect.top);
+                ctx.stroke();
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,49 @@
+Parte 1
+========================
+Canvas = 600x600;
+usando loop e setTimeOut, crie retângulos com tamanhos aleatórios entre 10px e 25px.
+Esses retângulos aparecem e, após 3 segundos, somem e são substituídos por outro.
+
+
+-----------------Revisando o Random
+Math.Random()*10; // encontra valores de 0 à 9
+Math.Random()*10 + 25; // encontra valores entre 25 e 34
+
+
+Parte 2
+=========================
+Crie um escutador de eventos para identificar quando ocorrer um clique no retangulo que está aparecendo.
+Avise pelo console que "acertou"
+
+Parte 3
+========================= 
+Crie um placar. Cada clique certo soma-se 10 pontos.
+Quando um item é clicado com sucesso, ele some imediatamente e já aparece o próximo.
+--DICA: limpe o intervalo e crie novamente
+
+Parte 4
+=========================
+Ao clicar, independente de onde for o click, deverá aparecer um quadradinho vermelho de 10x10 px que deverá sumir com 0,5 segundos; O click deverá ser no centro do quadradinho, conforme feito na aula anterior.
+
+======================DESAFIO========
+ao invés de aparecer um quadradinho no click, use um sprite de impacto no lugar.
+O CANVAS POSSUI CARREGAMENTO DE IMAGEM
+
+sprite de impactos, exemplo: 
+https://www.google.com/search?q=hit+sprite&tbm=isch&ved=2ahUKEwiT-pqJn8H0AhWuDbkGHXAKCt0Q2-cCegQIABAA&oq=hit+sprite&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgQIABAeMgYIABAFEB4yBggAEAUQHjIGCAAQBRAeMgYIABAFEB4yBggAEAUQHjIGCAAQBRAeMgYIABAFEB46BAgAEEM6CAgAEIAEELEDOgsIABCABBCxAxCDAVC1Bliu2AFg49kBaABwAHgAgAFziAHXBpIBAzEuN5gBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=EbSmYdOtOa6b5OUP8JSo6A0&bih=714&biw=1536&rlz=1C1ISCS_pt-PTBR963BR963
+
+///////////////////////////PARANDO e RECRIANDO INTEVALO
+
+let intervalo = geraIntervalo();
+
+clearInterval(intervalo);
+
+intervalo = geraIntervalo();
+
+
+function geraIntervalo(){
+    return setInterval(function(){
+        ...
+    },3000);
+}
+

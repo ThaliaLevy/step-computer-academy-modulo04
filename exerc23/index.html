@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - clicar no retângulo</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h2>PLACAR:
+        <p id="pontos">0</p>
+    </h2>
+    <canvas id="espacoCanvas" width="600" height="600" style="border: 1px solid black;"></canvas>
+</body>
+<script>
+    let pontos = 0;
+    $("#espacoCanvas").ready(() => {
+        let espacoCanvas = $("#espacoCanvas")[0];
+        let ctx = espacoCanvas.getContext("2d");
+
+        ctx.fillStyle = "pink";
+
+        let tamanhoRetangulo = limitarTamanhoRetangulo();
+
+        $("#espacoCanvas").click(function (e) {
+            let rect = this.getBoundingClientRect();
+
+            let coord = {
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top
+            }
+
+            ctx.fillStyle = "red";
+            ctx.fillRect(coord.x - 10, coord.y - 10, 10, 10);
+
+            setTimeout(() => {
+                ctx.clearRect(coord.x - 10, coord.y - 10, 20, 20);
+            }, 500);
+            
+            ctx.fillStyle = "pink";
+
+            if (coord.x >= pontoInicialX &&
+                coord.x <= pontoInicialX + tamanhoLado1 &&
+                coord.y >= pontoInicialY &&
+                coord.y <= pontoInicialY + tamanhoLado2
+            ) {
+                pontos += 10;
+                $("#pontos").html(pontos);
+                console.log("Você acertou!");
+                ctx.clearRect(pontoInicialX, pontoInicialY, tamanhoLado1, tamanhoLado2);
+
+                clearInterval(tamanhoRetangulo);
+                tamanhoRetangulo = limitarTamanhoRetangulo();
+            } else {
+                console.log("Você errou.");
+            }
+        })
+
+        function limitarTamanhoRetangulo() {
+            tamanhoLado1 = Math.floor((Math.random() * (25 - 10 + 1) + 10));
+            tamanhoLado2 = Math.floor((Math.random() * (25 - 10 + 1) + 10));
+            pontoInicialX = Math.floor((Math.random() * 600));
+            pontoInicialY = Math.floor((Math.random() * 600));
+            ctx.fillRect(pontoInicialX, pontoInicialY, tamanhoLado1, tamanhoLado2);
+
+            return setInterval(function () {
+                ctx.clearRect(pontoInicialX, pontoInicialY, tamanhoLado1, tamanhoLado2);
+                pontoInicialX = Math.floor((Math.random() * 600));
+                pontoInicialY = Math.floor((Math.random() * 600));
+                ctx.fillRect(pontoInicialX, pontoInicialY, tamanhoLado1, tamanhoLado2);
+            }, 3000);
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas - assinatura</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <label>Nome do cliente:</label>
+        <input type="text" id="nome">
+    </div>
+    <label>Assinatura:</label><br>
+    <canvas id="quadro" style="background:beige; cursor: crosshair;"></canvas>
+    <br />
+    <button type="button" id="limpa">Limpar</button> -
+    <button type="button" id="grava">Gravar</button> -
+    <button type="button" id="ler">Ler Gravado</button>
+</body>
+
+<script>
+    var indice = 0;
+    let nomes = []; //armazena nomes que serão vinculados aos desenhos
+    let desenhos = []; //armazena todos os desenhos
+
+    window.onload = function () {
+        var largura = 500;
+        var altura = 300;
+        var desenhando = false;// booleano para saber se o mouse está pressionado ou não
+        var desenho = []; //armazenará as linhas do desenho
+
+        var linha = 0;
+
+
+        var quadro = document.getElementById("quadro");
+        var ctx = quadro.getContext("2d");
+
+        quadro.setAttribute("width", largura); // em JQuery -> $("#quadro").attr("width",largura);
+        quadro.setAttribute("height", altura);
+
+        quadro.onmousedown = function (evt) {
+            let rect = this.getBoundingClientRect();
+
+            ctx.moveTo(evt.clientX - rect.left, evt.clientY - rect.top);
+            desenhando = true;//quando o mouse for pressionado, desenhando recebe true
+
+            //===========================Armazernar o ponto incial de uma nova linha em um array de linhas
+            desenho[linha] = [];
+            desenho[linha].push({ x: (evt.clientX - rect.left), y: (evt.clientY - rect.top) });
+        }
+
+        quadro.onmouseup = function () {
+            desenhando = false;//quando soltar o mouse, desenhando recebe false
+            linha++;
+            //    console.log(desenho);
+        }
+
+        quadro.onmousemove = function (evt) {
+            if (desenhando) {//fazer a linha apenas se o mouse estiver pressionado
+                let rect = this.getBoundingClientRect();
+
+                ctx.lineTo(evt.clientX - rect.left, evt.clientY - rect.top);
+                ctx.stroke();
+
+                //====================================Armazernar os pontos na linha atual
+
+                desenho[linha].push({ x: (evt.clientX - rect.left), y: (evt.clientY - rect.top) });
+            }
+        }
+        //JQuery BOTÕES
+
+        $("button").click(function () {
+            switch ($(this).attr("id")) {
+                case "limpa":
+                    //       ctx.clearRect(0, 0, quadro.width, quadro.height);
+                    break;
+                case "grava":
+                    sessionStorage.setItem("desenho", JSON.stringify(desenho));
+                    desenhos[indice] = JSON.parse(sessionStorage.getItem("desenho"));
+                    console.log(desenhos[indice]);
+                    //    nomes[indice] = [];
+                    //    nomes[indice].push($("#nome").val());
+
+                    sessionStorage.setItem("nome", JSON.stringify(nomes));
+                    indice++; //alterar o que salva o desenho no sessionStorage e utilizar o indice como indice
+                    break;
+                case "ler":
+
+                    //está salvando após a inserção de cada linha, e não o conjunto de linhas
+                    //a "linha" está contando varias vezes e salvando errado o nome, deixando alguns nulls
+                    if (sessionStorage.getItem("desenho") && sessionStorage.getItem("nome")) {
+                        let gravado2 = JSON.parse(sessionStorage.getItem("nome"));
+                        let gravado = JSON.parse(sessionStorage.getItem("desenho"));
+
+                        //   console.log(gravado);
+                        //  console.log(gravado2);
+
+                        for (let linha = 0; linha < gravado.length; linha++) {
+                            ctx.moveTo(gravado[linha][0].x, gravado[linha][0].y);
+
+                            for (let desenha = 1; desenha < gravado[linha].length; desenha++) {
+                                ctx.lineTo(gravado[linha][desenha].x, gravado[linha][desenha].y);
+                                ctx.stroke();
+                            }
+                        }
+                    } else {
+                        console.log("Nada gravado!")
+                    }
+                    break;
+                default: break;
+            }
+        })
+    }
+</script>
+
+</html>

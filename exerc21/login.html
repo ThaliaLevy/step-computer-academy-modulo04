@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login RegEx</title>
+    <!--Para utilizar JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Para utilizar o Bootstrap > CSS e JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <br><br>
+            <h2>Cadastro de aluno</h2>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Insira seu nome">
+            </div>
+            <p id="mensagem-erro-nome" style="color:white; font-family: 'Arial Narrow'; font-size: 11">Preencha o campo!
+            </p>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">CPF</label>
+                <input type="text" class="form-control" id="cpf"
+                    placeholder="Formato XXX.XXX.XXX-XX (pontos e traço são opcionais)">
+            </div>
+            <p id="mensagem-erro-cpf" style="color:white; font-family: 'Arial Narrow'; font-size: 11">CPF em
+                formato incorreto!</p>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Matrícula</label>
+                <input type="text" class="form-control" id="matricula"
+                    placeholder="Formato AAA-0000-X (último dígito pode ser letra ou número)">
+            </div>
+            <p id="mensagem-erro-matricula" style="color:white; font-family: 'Arial Narrow'; font-size: 11">Matrícula em
+                formato incorreto!</p>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Telefone</label>
+                <input type="text" class="form-control" id="telefone" placeholder="Formato nacional ou dos EUA">
+            </div>
+            <p id="mensagem-erro-telefone" style="color:white; font-family: 'Arial Narrow'; font-size: 11">Telefone em
+                formato incorreto! <br>
+                Dicas: <br>
+                EUA - (000)000-0000 | Nacional - (00)0000-0000 <br>
+                obrigatório uso de parênteses e traço
+            </p>
+
+            <button id="button" type="button" class="btn btn-info">Enviar</button>
+        </form>
+    </div>
+</body>
+<script>
+    let validador = "impedido";
+
+    $("#button").click(() => {
+        let cpf = $("#cpf").val();
+        let regexCpf = /\d{3}[.]?\d{3}[.]?\d{3}[-]?\d{2}/;
+
+        if (!regexCpf.test(cpf)) {
+            $("#mensagem-erro-cpf").css("color", "red");
+            validador = "impedido";
+        } else {
+            $("#mensagem-erro-cpf").css("color", "white");
+            validador = "permitido";
+        }
+    })
+
+    $("#button").click(() => {
+        let matricula = $("#matricula").val();
+        let regexMatricula = /[A-Za-z]{3,3}[-][0-9][0-9][0-9][0-9][-][0-9A-Za-z]/;
+
+        if (!regexMatricula.test(matricula)) {
+            $("#mensagem-erro-matricula").css("color", "red");
+            validador = "impedido";
+        } else {
+            $("#mensagem-erro-matricula").css("color", "white");
+            validador = "permitido";
+        }
+    })
+
+    $("#button").click(() => {
+        let telefone = $("#telefone").val();
+        let regexTelefoneNacional = /\(\d{2}\)9?\d{4}\-\d{4}$/;
+        let regexTelefoneEUA = /\(\d{3}\)\d{3}\-\d{4}$/;
+
+        if (!regexTelefoneNacional.test(telefone)) {
+            if (!regexTelefoneEUA.test(telefone)) {
+                $("#mensagem-erro-telefone").css("color", "red");
+                validador = "impedido";
+            } else {
+                $("#mensagem-erro-telefone").css("color", "white");
+                validador = "permitido";
+            }
+        } else {
+            $("#mensagem-erro-telefone").css("color", "white");
+            validador = "permitido";
+        }
+    })
+
+    class Pessoa {
+        nome;
+        matricula;
+        cpf;
+        telefone;
+
+        constructor(nome, matricula, cpf, telefone) {
+            this.nome = nome;
+            this.matricula = matricula;
+            this.cpf = cpf;
+            this.telefone = telefone;
+        }
+    }
+
+    let pessoas = [];
+
+    $("#button").click(() => {
+        if (validador == "permitido") {
+            pessoas.push(new Pessoa(
+                $("#nome").val(),
+                $("#matricula").val(),
+                $("#cpf").val(),
+                $("#telefone").val())
+            );
+
+            sessionStorage.setItem("pessoas", JSON.stringify(pessoas));
+            console.log(pessoas);
+
+            validador = "impedido";
+            $("#nome").val("");
+            $("#matricula").val("");
+            $("#cpf").val("");
+            $("#telefone").val("");
+        }
+    })
+
+</script>
+
+</html>

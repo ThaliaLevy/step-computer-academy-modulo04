@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--Para utilizar JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Para utilizar o Bootstrap > CSS e JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <br><br>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="insira seu nome">
+            </div>
+            <p id="mensagem-erro-nome" style="color:white; font-family: 'Arial Narrow'; font-size: 11">Necessário mais
+                de 4 caracteres</p>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="insira seu CPF">
+            </div>
+            <p id="mensagem-erro-cpf" style="color:white; font-family: 'Arial Narrow'; font-size: 11">CPF deve conter 14
+                caracteres: números, pontos e o traço do
+                dígito</p>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="insira seu e-mail">
+            </div>
+            <p id="mensagem-erro-email" style="color:white; font-family: 'Arial Narrow'; font-size: 11">E-mail em
+                formato incorreto!</p>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Confirmar e-mail</label>
+                <input type="email" class="form-control" id="confirmarEmail" placeholder="insira novamente seu e-mail">
+            </div>
+            <p id="mensagem-erro-confEmail" style="color:white; font-family: 'Arial Narrow'; font-size: 11">Confirmação
+                de e-mail diferente de e-mail!</p>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Data nascimento</label>
+                <input type="date" class="form-control" id="dataNasc" placeholder="insira sua data de nascimento">
+            </div>
+            <p id="mensagem-erro-data" style="color:white; font-family: 'Arial Narrow'; font-size: 11">Data incorreta!
+            </p>
+            <button type="button" id="button" class="btn btn-info">Enviar</button>
+        </form>
+    </div>
+</body>
+<script>
+    $("#button").click(function () {
+        let nome = $("#nome").val();
+        if (nome == "") {
+            $("#mensagem-erro-nome").css("color", "red");
+        }
+
+        let cpf = $("#cpf").val();
+        if (cpf == "") {
+            $("#mensagem-erro-cpf").css("color", "red");
+        }
+
+        let email = $("#email").val();
+        if (email == "") {
+            $("#mensagem-erro-email").css("color", "red");
+        }
+
+        let confEmail = $("#confirmarEmail").val();
+        if (confEmail == "") {
+            $("#mensagem-erro-confEmail").css("color", "red");
+        }
+
+        let data = $("#dataNasc").val();
+        if (data == "") {
+            $("#mensagem-erro-data").css("color", "red");
+        }
+    });
+
+    $("#nome").click(function () {
+        $("#button").click(function () {
+            let nome = $("#nome").val().length;
+            if (nome < 4) {
+                $("#mensagem-erro-nome").css("color", "red");
+            } else {
+                $("#mensagem-erro-nome").css("color", "white");
+            }
+        });
+    })
+
+    $("#cpf").click(function () {
+        $("#button").click(function () {
+            let tamCpf = $("#cpf").val().length;
+            let cpf = $("#cpf").val();
+            if (tamCpf == 14) {
+                let splitCpf = cpf.split(".", 3);
+                if (splitCpf.length == 3) {
+                    if (cpf.indexOf("-") != -1) {
+                        $("#mensagem-erro-cpf").css("color", "white");
+                    } else {
+                        $("#mensagem-erro-cpf").css("color", "red");
+                    }
+                } else {
+                    $("#mensagem-erro-cpf").css("color", "red");
+                }
+            } else {
+                $("#mensagem-erro-cpf").css("color", "red");
+            }
+        });
+    });
+
+    $("#email").click(function () {
+        $("#button").click(function () {
+            let email = $("#email").val();
+            if (email.indexOf("@") != -1 && email.indexOf(".") != -1) {
+                $("#mensagem-erro-email").css("color", "white");
+            } else {
+                $("#mensagem-erro-email").css("color", "red");
+            }
+        });
+    })
+
+    $("#confirmarEmail").click(function () {
+        $("#button").click(function () {
+            let email = $("#email").val();
+            let confirmarEmail = $("#confirmarEmail").val();
+            if (confirmarEmail != email){
+                $("#mensagem-erro-confEmail").css("color", "red");
+            }else{
+                $("#mensagem-erro-confEmail").css("color", "white");
+            }
+                
+        });
+    })
+
+    let dataAtual;
+
+    Date.prototype.yyyymmdd = function () {
+        var yyyy = this.getFullYear().toString();
+        var mm = (this.getMonth() + 1).toString();
+        var dd = this.getDate().toString();
+        return yyyy + mm + dd;
+    };
+
+    var date = new Date();
+    dataAtual = date.yyyymmdd();
+
+    $("#dataNasc").click(function () {
+        $("#button").click(function () {
+            let auxData = $("#dataNasc").val();
+            let dataNascSemFormato = auxData.split("-", 3) //objeto
+            let dataNasc = dataNascSemFormato[0] + dataNascSemFormato[1] + dataNascSemFormato[2];    //unindo em variavel
+            if (auxData.length == 10) {
+                if (dataAtual >= dataNasc) {
+                    console.log("ok")
+                    console.log(dataNasc)
+                    console.log(dataAtual)
+                    $("#mensagem-erro-data").css("color", "white");
+                } else {
+                    $("#mensagem-erro-data").css("color", "red");
+                }
+            }
+        });
+    })
+
+    $(document).ready(function () {
+        $("#nome").bind('paste', function (e) {
+            e.preventDefault();
+        });
+
+        $("#cpf").bind('paste', function (e) {
+            e.preventDefault();
+        });
+
+        $("#email").bind('paste', function (e) {
+            e.preventDefault();
+        });
+
+        $("#confirmarEmail").bind('paste', function (e) {
+            e.preventDefault();
+        });
+
+        $("#dataNasc").bind('paste', function (e) {
+            e.preventDefault();
+        });
+    }); 
+</script>
+
+</html>

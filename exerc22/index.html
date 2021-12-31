@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas linha contínua</title>
+</head>
+
+<body>
+    <canvas id="canvasContinuo" width="200" height="200" style="border: 1px solid black;"></canvas>
+    <br><br>
+    <button id="button">Limpar o canvas</button>
+</body>
+<script>
+    window.onload = function () {
+        montarCanvas();
+    }
+    var contCor = 0;
+
+    function montarCanvas() {
+        var canvas = document.getElementById("canvasContinuo");
+        var ctx = canvas.getContext("2d");
+        let cores = ["red", "blue", "gray", "yellow", "brown", "pink"];
+
+        var coordInicial = {
+            x: 0,
+            y: 0
+        }
+
+        var cont = 1;
+
+        canvas.addEventListener("click", function (e) {
+            var rect = this.getBoundingClientRect();
+
+            let coordFinal = {
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top
+            }
+
+            if (cont == 1) {
+                coordInicial.x = coordFinal.x;
+                coordInicial.y = coordFinal.y;
+                cont++;
+            } else {
+                ctx.beginPath();
+                ctx.moveTo(coordInicial.x, coordInicial.y);
+                ctx.lineTo(coordFinal.x, coordFinal.y);
+
+                ctx.strokeStyle = cores[contCor];
+
+                ctx.stroke();
+                ctx.closePath();
+
+                coordInicial.x = coordFinal.x;
+                coordInicial.y = coordFinal.y;
+
+                if (contCor == 5) {
+                    contCor = 0;
+                } else {
+                    contCor++;
+                }
+            }
+        });
+
+        document.getElementById("button").addEventListener("click", () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            cont = 1;
+        })
+    }
+</script>
+
+</html>

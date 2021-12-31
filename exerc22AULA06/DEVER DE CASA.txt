@@ -1,0 +1,8 @@
+DEVER DE CASA
+=============
+
+
+crie um canvas que você crie linhas ao clicar (linha contínua), sabendo.
+
+cada linha será em uma cor diferente
+e deverá ter um botão para limpar o canvas

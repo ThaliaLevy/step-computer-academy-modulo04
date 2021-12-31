@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegEx</title>
+</head>
+<body>
+    <h1>Expressões Regulares</h1>
+    <p>
+        São combinações de padrões dentro de uma string.
+    </p>
+    <h1 id="Titulo">Meu Título</h1>
+    
+</body>
+<script>
+    let cpf = "000.000.000-00";
+    let regEx = /\d{3}\.\d{3}\.\d{3}\-\d{2}/;
+    let reExCpfponto = /\d{3}[.]?\d{3}[.]?\d{3}[-]?\d{2}/;
+
+    let celular = "(21) 98171-9965";
+    let regExCell = /(\d{2}) [d]?\d{4}\-\d{4}/; 
+
+    let expressao = /[.-]?/; //o ponto ou traço opcional
+    expressao = /[012345789]/; //de 0 a 9
+    expressao = /[0-9]/;//decima encurtado
+    expressao = /[/*-+||\\()[\]{}]/;//símbolos
+    expressao = /^[A-Za-z0-9]/;//não caracteres
+    expressao = /\W\w/ ;//carcateres maisculos ou minusculos
+
+    //usando as expressões faça uma validação de data com esse formato 00/00/0000 ou 00-00-0000; Os dois formatos
+    //serão aceitos
+    expressao = /[0-3][0-9][-/][01][0-9][/-][0-9]{4}/;
+
+    //epxressões regulares =  validar email, cpf, data e CEP
+
+    ///////////////////////////////////////////BOM _ Browser Object Manager
+
+    console.log(window.innerWidth); //tb para height
+    console.log(window.outerWidth); //tb para heigth
+
+    console.log(screen.availHeight); //tb para width
+    console.log(screen.height); //tb para width
+
+    /*
+        window.open();
+        window.close();
+        window.moveTo(x,y); mover a janela de posição na tela
+        window.resizeTo(x,y); muda o tamanho da janela
+
+        window.history.back();
+        window.history.forward();
+    */
+
+    console.log(navigator.appName);
+    console.log(navigator.appCodeName);
+    console.log(navigator.appVersion);
+    console.log(navigator.platform);
+    console.log(navigator.language);
+    console.log(navigator.onLine);
+    console.log(navigator.cookieEnabled);
+
+    $("#Titulo").remove();
+</script>
+</html>

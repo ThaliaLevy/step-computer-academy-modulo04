@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Administrador</title>
     <link rel="stylesheet" href="global.css" type="text/css">
+    <!--Para utilizar JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <!-- Para utilizar o Bootstrap > CSS e JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
@@ -30,12 +30,14 @@
                 <label for="exampleFormControlInput1">Senha</label>
                 <input type="password" class="form-control" id="password-admin" placeholder="insira sua senha">
             </div>
-            <button type="button" class="btn btn-info" onclick="cadastrar()">Cadastrar</button>
-            <button type="button" class="btn btn-info" onclick="excluir()">Excluir</button>
-            <button type="button" class="btn btn-info" onclick="editar()">Editar</button>
+            <button type="button" class="btn btn-info" id="cadastrar">Cadastrar</button>
+            <button type="button" id="excluir" class="btn btn-info">Excluir</button>
+            <button type="button" class="btn btn-info" id="editar">Editar</button>
             <br><br>
-            <p>*Verifique no console o array com os cadastros</p>
-            <p>*Para excluir ou editar um cadastro, basta preencher o e-mail</p>
+            <div id="mudarCor" style="color: white">
+                <p>*Verifique no console o array com os cadastros</p>
+                <p>*Para excluir ou editar um cadastro, basta preencher o e-mail</p>
+            </div>
             <div class="form-group none" id="bloco1">
                 <label for="exampleFormControlInput1">Insira o novo email</label>
                 <input type="email" class="form-control" id="email-editar" placeholder="insira seu e-mail">
@@ -44,16 +46,29 @@
                 <label for="exampleFormControlInput1">Insira a nova senha</label>
                 <input type="password" class="form-control" id="password-editar" placeholder="insira sua senha">
                 <br>
-                <button type="button" class="btn btn-info" onclick="salvarEdicao()">Salvar</button>
+                <button type="button" class="btn btn-info" id="salvarEdicao">Salvar</button>
             </div>
             <br><br>
             <a href="index.html">
-            <button type="button" class="btn btn-info">Voltar para a tela inicial</button></a>
+                <button type="button" class="btn btn-info">Voltar para a tela inicial</button></a>
         </form>
     </div>
 </body>
-<script src="global.js">
+<script src="global.js"></script>
+<script>    
+    $("#cadastrar").click(function () {
+        console.log("Pessoa cadastrada: " + $("#email-admin").val() + "\nSenha cadastrada: " + $("#password-admin").val());
+        $("#email-admin").val("");
+        $("#password-admin").val("");
+    })
 
+    $("#email-admin").mousemove(function () {
+        $("#mudarCor").css("color", "red");
+    })
+
+    $("#password-admin").mousemove(function () {
+        $("#mudarCor").css("color", "red");
+    })
 </script>
 
 </html>
