@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promisses</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div></div>
+    <ul class="list-group">
+        <li class="list-group-item">CLIENTES</li>
+
+        <li class="list-group-item list-group-item-info"></li>
+        <li class="list-group-item list-group-item-light"></li>
+        <li class="list-group-item list-group-item-info"></li>
+        <li class="list-group-item list-group-item-light"></li>
+        <li class="list-group-item list-group-item-info"></li>
+        <li class="list-group-item list-group-item-light"></li>
+    </ul>
+    <div>
+        <ul class="list-group" id="idCarro">
+            <li class="list-group-item">CARROS</li>
+            <li class="list-group-item list-group-item-warning"></li>
+            <li class="list-group-item list-group-item-light"></li>
+            <li class="list-group-item list-group-item-warning"></li>
+            <li class="list-group-item list-group-item-light"></li>
+            <li class="list-group-item list-group-item-warning"></li>
+            <li class="list-group-item list-group-item-light"></li>
+        </ul>
+    </div>
+</body>
+<script>
+    function getCarros() {
+
+        let carros = [{
+                carro1:'Audi',
+                carro2:'Bentley',
+                carro3:'BMW',
+                carro4:'Cintroen',
+                carro5:'Ferrari',
+                carro6:'Jaguar'
+            }] 
+        
+
+        return new Promise((resolve, reject) => {
+            resolve(carros);
+            reject(new Error("Erro ao pegar a lista de carros."));
+        })
+    }
+
+    getCarros().then(lista => {
+      //  console.log(`${lista[0].carro1}`)
+        let texto = "";
+        let control = 0;
+        let id = idCarro;
+//CONTINUAR DAQUI. FAZENDO COMPARAÇÃO DE IDS PARA ACRESCENTAR SEPARADAMENTO EM CADA LINHA DE ACORDO COM O ID
+        for (i = 0; i < lista.length; i++) {
+          //  texto += `${lista[i].carro}`;h
+          texto += `<tr> 
+                        <td> ${lista[i].carro1} </td>
+                        <td> ${lista[i].carro2} </td>
+                        <td> ${lista[i].carro3} </td>
+                        <td> ${lista[i].carro4} </td>
+                        <td> ${lista[i].carro5} </td>
+                        <td> ${lista[i].carro6} </td>
+                      </tr>`;
+            $("#idCarro").html(texto);
+
+
+            /*
+                       
+
+                        var id = $('#casa').attr('id');
+                        console.log(id)
+                            //TENTAR FAZER COMPARAÇÃO DE IDs E MOSTRAR OS RESULTADOS POR LINHA - IDs DIFERENTES PARA CADA LINHA
+
+                        //if (id)
+                         */
+        }
+
+
+
+    })
+
+
+    function getClientes() {
+
+        let clientes = [
+
+            {
+                nome: "Caio Araujo",
+                cpf: "174.851.637-01",
+                email: "caiodaluz@gmail.com",
+                estado: "RJ"
+            }, {
+                nome: "Carlino Júnior",
+                cpf: "251.764.412-01",
+                email: "carlinoJunior@gmail.com",
+                estado: "RJ"
+            }, {
+                nome: "Juca Bala",
+                cpf: "141.643.291-02",
+                email: "jucabala01@gmail.com",
+                estado: "SP"
+            }, {
+                nome: "Claudemiro Filho",
+                cpf: "912.381.245-01",
+                email: "filhoclaudemiro@gmail.com",
+                estado: "AM"
+            }
+
+        ]
+
+        return new Promise((resolve, reject) => {
+            resolve(clientes);
+            reject(new Error("Não foi possível pegar a lista"));
+        })
+    }
+
+    getClientes().then(lista => {
+
+        let texto = "";
+
+        for (i = 0; i < lista.length; i++) {
+            texto += `<tr> 
+                                <td> ${lista[i].nome} </td>
+                                <td> ${lista[i].cpf} </td>
+                                <td> ${lista[i].email} </td>
+                                <td> ${lista[i].estado} </td>
+                              </tr>`;
+        }
+
+        $("#colunasClientes").html(texto);
+
+    })
+</script>
+
+</html>

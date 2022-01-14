@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVER 8</title>
+   
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container p-5">
+
+        <h3>Cadastro</h3>
+
+        <hr>
+
+        <form name="formulario" id="form">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome completo</label>
+                <input type="text" class="form-control w-50" id="nome" required>
+                <div id="erroNome" class="form-text text-danger">Nome inválido! No mínimo 4 letras.</div>
+            </div>
+    
+            <label for="assinatura" class="form-label">Assinatura</label>
+            <div class="mb-3">
+                <canvas id="canvas" width="600" height="200" style="background-color: beige;"></canvas>
+                <canvas id="canvasLeitura" width="600" height="200" style="background-color: beige;"></canvas>
+            </div>
+    
+            <div class="alert alert-success w-50" role="alert" id="msgExito">
+                Cadastro realizado com sucesso!
+            </div>
+    
+            <div class="alert alert-danger w-50" role="alert" id="msgErro">
+                Nome já cadastrado!
+            </div>
+
+            <div class="alert alert-danger w-50" role="alert" id="msgNaoEncontrado">
+                Nenhum registro encontrado.
+            </div>
+    
+            <button type="submit" disabled id="btCadastrar" class="btn btn-success">Cadastrar</button>
+
+            <button type="button" id="btVoltar" class="btn btn-success">Voltar ao cadastro</button>
+    
+            <button type="button" id="btLimpar" class="btn btn-danger">Limpar</button>
+            
+            <button type="button" id="btLerCadastrado" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#procurarCadastrado">Procurar cadastrado</button>
+            
+            <div class="modal fade" id="procurarCadastrado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="procurarCadastradoLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="procurarCadastradoLabel">Procura cadastro</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="nomeProcura" class="form-label">Nome procurado</label>
+                                <input type="text" id="nomeProcura" class="form-control">
+                            </div>
+                            <button type="button" disabled id="btProcurar" class="btn btn-success">Procurar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+</body>
+</html>
