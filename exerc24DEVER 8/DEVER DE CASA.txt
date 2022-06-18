@@ -1,8 +1,0 @@
-DEVER DE CASA
-==============
-
-Permita salvar mais de um assinatura, recebendo: Nome do cliente e assinatura.
-
---------RESOLVA A QUESTÃO DO REINÍCIO DO CANVAS-----------
-
-Permita exibir as assinaturas pesquisando pelo nome do cliente
