@@ -1,6 +1,0 @@
-dever de casa
--------------
-
-Desenvolva uma página que imprima 2 arraylist que vem como promessa.
-um arraylist será de carros e outro de clientes
-Os arraylists devem ser impressos com formatação de texto no HTML.
